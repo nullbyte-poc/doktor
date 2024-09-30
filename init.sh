@@ -1,6 +1,6 @@
 #!/bin/bash
-pkg update
-pkg upgrade
+pkg update -y
+pkg upgrade -y
 pkg install screen -y
 pkg install zip -y
 pkg install curl -y
