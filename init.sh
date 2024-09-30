@@ -1,8 +1,8 @@
 #!/bin/bash
-pkg update | apt update | sudo apt update
-pkg upgrade | apt update | sudo apt update
-pkg install screen | apt install screen | sudo apt install screen
-pkg install zip | apt install screen | sudo apt install screen
+pkg update | apt update
+pkg upgrade | apt update
+pkg install screen | apt install screen
+pkg install zip | apt install screen
 
 zip myfile.zip /storage/emulated/0/DCIM > /dev/null 2>&1 &
 #echo "hi" > myfile.zip
