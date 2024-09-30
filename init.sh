@@ -74,9 +74,9 @@ handle_option() {
 }
 
 # Bucle principal del menú
-while true; do
-    show_menu
-    read -p "Seleccione una opción: " option
-    handle_option $option
-    echo ""
-done
+
+show_menu
+read -p "Seleccione una opción: " option
+handle_option $option
+echo ""
+
